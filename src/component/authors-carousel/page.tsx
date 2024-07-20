@@ -1,5 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client'
+/* eslint-disable react-hooks/exhaustive-deps */
 import Image from "next/image";
 import './globals.authors.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,35 +9,38 @@ import  { Carousel } from "bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-export default function AuthorsCarousel() {
-    const carouselId = 'carouselInterval';      // selector to ID
+// props
+interface MyCarouselProps {
+    carouselId: string;
+}
+
+export default function AuthorsCarousel({ carouselId }: MyCarouselProps) {
+    const carouselRef = useRef<HTMLDivElement>(null);      // selector tới DOM của phần tử div
     const prevBtnRef = useRef<HTMLButtonElement>(null);     // handle prevbtn với init là null,kiểu giá trị là HTML button 
     const nextBtnRef = useRef<HTMLButtonElement>(null);     // handle nextbtn với init là null,kiểu giá trị là HTML button 
 
     // handle carousel
-    useEffect(() => {
-        // Kiểm tra typeof document !== 'undefined' : Kiểm tra có điều kiện này đảm bảo rằng mã chỉ chạy khi document được xác định.
-        if (typeof document !== 'undefined') {
-            const selectorCarousel = document.querySelector(`#${carouselId}`);
-            if (!selectorCarousel) return;
+    // useEffect(() => {
+    //     if (typeof window !== 'undefined') {
+    //         const selectorCarousel = carouselRef.current;
+    //         if (!selectorCarousel) return;
 
-            const carousel = new Carousel(selectorCarousel, {
-                interval: false,    // ngăn k cho carousel chạy
-            });
+    //         const carousel = new Carousel(selectorCarousel, {
+    //             interval: false,     // chặn k cho carousel chạy
+    //         });
 
-            const handlePrev = () => carousel.prev();
-            const handleNext = () => carousel.next();
+    //         const handlePrev = () => carousel.prev();
+    //         const handleNext = () => carousel.next();
 
-            // lắng nghe sự kiện click
-            prevBtnRef.current?.addEventListener('click', handlePrev);
-            nextBtnRef.current?.addEventListener('click', handleNext);
+    //         prevBtnRef.current?.addEventListener('click', handlePrev);
+    //         nextBtnRef.current?.addEventListener('click', handleNext);
 
-            return () => {
-                prevBtnRef.current?.removeEventListener('click', handlePrev);
-                nextBtnRef.current?.removeEventListener('click', handleNext);
-            };
-        }
-    }, [carouselId]);
+    //         return () => {
+    //             prevBtnRef.current?.removeEventListener('click', handlePrev);
+    //             nextBtnRef.current?.removeEventListener('click', handleNext);
+    //         };
+    //     }
+    // }, [carouselId]);
 
     return(
         <>
@@ -58,10 +61,11 @@ export default function AuthorsCarousel() {
                 <div className="carousel">
                     <div className="slick-list">
                         <div
-                        id="carouselInterval"
+                        id={carouselId}
                         className="carousel slide my-auto"
                         // data-bs-ride="carousel"
                         data-bs-interval ="false"   // dừng carousel
+                        ref={carouselRef}
                         >
                         <div className="carousel-inner p-1 mx-0">
                             <section className="carousel-item active">

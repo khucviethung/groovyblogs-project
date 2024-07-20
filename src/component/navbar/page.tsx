@@ -173,7 +173,7 @@ export default function Navbar() {
                   {filteredResults.map((result, index) => (
                     <li key={index} className="show-item-search">
                       <Link 
-                        href=''
+                        href='https://www.facebook.com/'
                         className="name-search" 
                         onClick={closeSearchModal}>
                       </Link>
