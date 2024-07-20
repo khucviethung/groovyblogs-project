@@ -175,7 +175,7 @@ export default function Navbar() {
                   {filteredResults.map((result, index) => (
                     <li key={index} className="show-item-search">
                       <Link 
-                        href={`/navbar/${result.id}`} 
+                        href=''
                         className="name-search" 
                         onClick={closeSearchModal}>
                       </Link>
