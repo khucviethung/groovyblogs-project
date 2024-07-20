@@ -16,24 +16,27 @@ export default function AuthorsCarousel() {
 
     // handle carousel
     useEffect(() => {
-        const selectorCarousel = document.querySelector(`#${carouselId}`);
-        if (!selectorCarousel) return;
+        // Kiểm tra typeof document !== 'undefined' : Kiểm tra có điều kiện này đảm bảo rằng mã chỉ chạy khi document được xác định.
+        if (typeof document !== 'undefined') {
+            const selectorCarousel = document.querySelector(`#${carouselId}`);
+            if (!selectorCarousel) return;
 
-        const carousel = new Carousel(selectorCarousel, {
-            interval: false,    // ngăn k cho carousel chạy
-        });
+            const carousel = new Carousel(selectorCarousel, {
+                interval: false,    // ngăn k cho carousel chạy
+            });
 
-        const handlePrev = () => carousel.prev();
-        const handleNext = () => carousel.next();
+            const handlePrev = () => carousel.prev();
+            const handleNext = () => carousel.next();
 
-        // lắng nghe sự kiện click
-        prevBtnRef.current?.addEventListener('click', handlePrev);
-        nextBtnRef.current?.addEventListener('click', handleNext);
+            // lắng nghe sự kiện click
+            prevBtnRef.current?.addEventListener('click', handlePrev);
+            nextBtnRef.current?.addEventListener('click', handleNext);
 
-        return () => {
-            prevBtnRef.current?.removeEventListener('click', handlePrev);
-            nextBtnRef.current?.removeEventListener('click', handleNext);
-        };
+            return () => {
+                prevBtnRef.current?.removeEventListener('click', handlePrev);
+                nextBtnRef.current?.removeEventListener('click', handleNext);
+            };
+        }
     }, [carouselId]);
 
     return(

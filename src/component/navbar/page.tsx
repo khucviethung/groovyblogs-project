@@ -11,8 +11,6 @@ import { Form, Modal } from "react-bootstrap";
 import axios from "axios";
 
 
-
-
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
