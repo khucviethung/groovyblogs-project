@@ -1,0 +1,167 @@
+/* sign in css */
+
+/* start css Sign in page here */
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.subcribe {
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+  padding: 60px 50px;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.subcribe-form {
+  padding-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.form-group {
+  display: block;
+  position: relative;
+  width: auto;
+  max-width: 500px;
+  margin: 25px auto;
+}
+
+.form-group input {
+  text-align: left;
+  margin: 0;
+  padding-right: 175px;
+  height: 60px;
+  padding: 15px 45px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  border-radius: 100px;
+}
+
+.inputbox,
+input[type="email"] {
+  display: block;
+  background: #fff;
+  color: #353a44;
+  font-family: sans-serif;
+  line-height: 1.8;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  border: 1px solid rgb(39 39 39 / 75%);
+}
+
+.submit {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  height: 47px;
+  font-size: 17px;
+  padding: 0px 25px;
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  font-family: sans-serif;
+  font-weight: 700;
+  border-radius: 25px;
+  border: 1px solid rgb(39 39 39 / 75%);
+  background-color: #ff4c60;
+}
+
+.np-bottom a {
+  padding-bottom: 5px;
+  background-image: linear-gradient(to right, #333 0%, #333 100%);
+  background-size: 0% 5%;
+  background-repeat: no-repeat;
+  background-position: left 80%;
+  color: #333;
+}
+
+.np-bottom a:hover {
+  color: #333 !important;
+  background-size: 100% 5%;
+  text-decoration: none;
+}
+
+.np-bottom {
+  padding-bottom: 0 !important;
+}
+
+form p {
+  font-size: 13px;
+}
+
+/* reponsive */
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+
+/* Grid Layout Adjustments */
+@media screen and (min-width: 1024px) {
+  .grid-70 {
+    float: left;
+    width: 70%;
+  }
+  .grid-100 {
+    clear: both;
+    width: 100%;
+  }
+  .grid-30 {
+    width: 30%;
+  }
+  .grid-33 {
+    width: 33.333333%;
+  }
+}
+
+/* Additional Mobile and Tablet Adjustments */
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 8px;
+  }
+
+  .title.large {
+    font-size: 1.5rem;
+  }
+
+  .inputbox.large {
+    padding: 10px;
+  }
+
+  .submit {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .fw-bold {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid-container {
+    padding: 4px;
+  }
+
+  .title.large {
+    font-size: 1.2rem;
+  }
+
+  .inputbox.large {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .submit {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}

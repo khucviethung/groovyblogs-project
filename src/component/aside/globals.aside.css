@@ -1,0 +1,305 @@
+/* css aside */
+.social-button {
+  float: right;
+  margin: 5px 0 0 30px;
+}
+
+.social-button.fill-color a {
+  display: inline-block;
+  margin: 0 2px;
+  background: none;
+  box-shadow: none;
+  width: 34px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.social-button a i.fa-brands,
+.social-button a i.fa-solid {
+  font-size: 22px;
+  font-size: normal !important;
+  display: inline-block;
+  font: FontAwesome;
+  text-rendering: auto;
+}
+
+/* thumb css image */
+.thumb {
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  min-height: 80px;
+  display: block;
+  width: 300px;
+  height: 380px;
+  min-width: 300px;
+  border: 1px solid rgb(39 39 39 / 75%);
+}
+
+.thumb-footer {
+  width: 60px;
+  height: 64px;
+  min-height: 52px;
+  overflow: inherit;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.img-aside {
+  position: absolute;
+  width: 60px;
+  height: 64px;
+  min-height: 52px;
+  overflow: inherit;
+  left: 0;
+  top: 1px;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.thumb-aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100% !important;
+  z-index: 1;
+}
+
+.avatar {
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  font-size: 38px !important;
+}
+
+.avatar a {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  min-height: 80px;
+  border: 1px solid black;
+}
+
+.avatar span {
+  border-radius: 100%;
+}
+
+.widget-aside {
+  position: relative;
+  margin-bottom: 50px;
+  width: auto;
+  float: none;
+  padding: 15px 23px;
+  z-index: 2;
+}
+
+.thumb-avatar {
+  position: relative;
+  z-index: 1;
+  min-height: 80px;
+}
+
+.imgAboutMe span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100% !important;
+  z-index: 1;
+  border-radius: 100%;
+}
+
+.img-content {
+  border-radius: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100% !important;
+  z-index: 1;
+}
+
+/* hanle background right-content */
+.right-content {
+  background-color: #fffacd;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 15px;
+  margin-left: 60px;
+  margin-bottom: 150px;
+}
+
+/* author article */
+.author-article {
+  float: right;
+  text-decoration: none;
+  color: #333;
+}
+
+.author-article:hover {
+  color: #333;
+}
+
+.img-author {
+  background-image: url("https://ghost.estudiopatagon.com/groovy/content/im…eard-very-funny-joke-laughed_295783-2454--1-.webp");
+  width: 35px;
+  height: 35px;
+  position: relative;
+  left: auto;
+  top: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+  border-radius: 50%;
+  border: 1px solid black;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+/* css avatar  */
+.img-jonathan {
+  border: 1px solid black;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+.about-jonathanImg {
+  border: 1px solid black;
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.name-aboutme > a {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-decoration: none;
+  outline: 0;
+  color: #333;
+}
+
+.founder {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.text-about-me {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* css icon right 3 */
+.icon-right-3 {
+  display: inline-block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    vertical-align: middle;
+    font-size: 21px;
+    background-color: #fff;
+}
+
+/* css tag Cloud */
+.tagCloud > div > button {
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 0px 10px 12px 0px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+.fa-twitter,
+.fa-facebook-f,
+.fa-solid-earth:not(.social-button ) {
+  font-size: 14px;
+  font-size: inherit;
+}
+
+/* sticky position for sidebar */
+.titleRight {
+  position: absolute;
+  left: 25px;
+  top: -20px;
+  /* z-index: 2; */
+  padding: 4px 25px;
+  background: #fff;
+  border: 1px solid rgb(39 39 39 / 75%);
+  border-radius: 100px;
+  letter-spacing: 0.25px;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+
+#sidebar {
+  z-index: 3;
+  float: right;
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  min-height: 1px;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.stickyAside {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.sticky-item:not(:last-child) {
+  position: relative;
+  margin-bottom: 50px;
+  width: auto;
+  float: none;
+}
+
+/* number footer */
+.number {
+  position: absolute;
+  z-index: 3;
+  left: -10px;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #000;
+  background: url(https://ghost.estudiopatagon.com/groovy/assets/images/number-decoration.svg)
+    no-repeat center center;
+}
+
+/* reponsive aside */
+@media screen and (max-width:480px) {
+  #sidebar{
+    display: none;  /* hide sidebar in mobile */
+  }
+}

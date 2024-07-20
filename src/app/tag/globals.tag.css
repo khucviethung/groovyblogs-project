@@ -1,0 +1,191 @@
+/* tag css */
+/* start css tag content here */
+.tag-description {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+  min-height: 150px;
+  margin: 0 auto 50px auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  z-index: 1;
+  padding: 60px;
+  padding-bottom: 50px;
+}
+.overplay:before {
+  background-color: #1dd7c2;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: -2px;
+  bottom: -2px;
+  opacity: 0.25;
+}
+
+.tag-description .left {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  width: auto;
+}
+
+.dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: var(--main-color);
+  vertical-align: middle;
+  border-radius: 100%;
+  margin: -2px 5px 0;
+}
+
+.titleTag {
+  background: #fff;
+  border: 1px solid rgb(39 39 39 / 75%);
+  padding: 4px 30px;
+  border-radius: 100px;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px;
+  color: #333;
+}
+
+.titleTag svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+  vertical-align: middle;
+  margin-top: -3px;
+  stroke: rgba(0, 0, 0, 0.4);
+  fill: #1dd7c2 !important;
+}
+
+.left b {
+  display: block;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.right p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.underline-effect {
+  color: #333 !important;
+  background-size: 100% 5%;
+  text-decoration: none;
+}
+
+.underline-effect a:not(.epcl-button) {
+  padding-bottom: 5px;
+  background-image: linear-gradient(to right, #333 0%, #333 100%);
+  background-size: 0% 5%;
+  background-repeat: no-repeat;
+  background-position: left 80%;
+  transition: all 400ms ease;
+  text-decoration: none;
+  color: #333 !important;
+}
+
+.underline-effect a:not(.epcl-button):hover {
+  color: #333 !important;
+  background-size: 100% 5%;
+}
+
+
+/* reponsive tag */
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media screen and (max-width: 1150px) {
+  .grid-container {
+    max-width: 1100px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width:1150px) {
+  .tag-description{
+    margin: 20px;
+
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-70 {
+    float: left;
+    width: 70%;
+  }
+
+  .grid-100 {
+    clear: both;
+    width: 100%;
+  }
+
+  .grid-30 {
+    width: 30%;
+  }
+
+  .grid-33 {
+    width: 33.333333%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tag-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px !important;
+  }
+  
+  .tag-description .left, 
+  .tag-description .right {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .tag-description .left b, 
+  .tag-description .right p {
+    font-size: 13px;
+  }
+
+  .titleTag {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .tag-description {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .tag-description .left {
+    width: 35%;
+  }
+
+  .tag-description .right {
+    width: 65%;
+  }
+}
+
+.grid-35, .grid-65 {
+  box-sizing: border-box;
+}
+
+.grid-35 {
+  width: 35%;
+}
+
+.grid-65 {
+  width: 65%;
+}

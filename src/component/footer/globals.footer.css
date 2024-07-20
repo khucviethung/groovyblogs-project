@@ -1,0 +1,407 @@
+/* footer */
+
+/* hover img all */
+/* button:hover,
+img:hover:not(.img-menu) {
+  box-shadow: 2px 2px #443c3c;
+  transform: translate3d(-2px, -2px, 0);
+  transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
+  cursor: pointer;
+}
+
+button:active,
+img:active:not(.img-menu) {
+  box-shadow: 2px 2px #443c3c;
+  transform: translate3d(-2px, -2px, 0);
+} */
+
+.img-effect:hover {
+  -webkit-box-shadow: 4px 4px 4px 0px #333;
+  box-shadow: 4px 4px 4px 0px #333;
+  -webkit-transform: translate(-3px, -3px);
+  -ms-transform: translate(-3px, -3px);
+  transform: translate(-3px, -3px);
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+/* login Button */
+.signinButton:not(.nav-menu ul.menu) {
+  background-image: none;
+  background-color: #000;
+  border: 1px solid black;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 20px;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+.signinButton:not(.nav-menu ul.menu):hover {
+  box-shadow: 2px 2px #443c3c;
+  transform: translate3d(-2px, -2px, 0);
+  transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+}
+
+/* content css */
+/* main content */
+.bg-box {
+  background-color: #fffacd;
+  border-radius: 15px;
+  border: 1px solid rgb(39 39 39 / 75%);
+}
+
+/* thumb css image */
+.thumb {
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  min-height: 80px;
+  display: block;
+  width: 300px;
+  height: 380px;
+  min-width: 300px;
+  border: 1px solid rgb(39 39 39 / 75%);
+}
+
+.thumb-footer {
+  width: 60px;
+  height: 64px;
+  min-height: 52px;
+  overflow: inherit;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  padding: 0;
+  border-radius: 8px;
+}
+
+/* buton-content-active css */
+.button-content {
+  border-radius: 25px;
+  border: 1px solid rgb(39 39 39 / 75%);
+  padding: 6px 15px;
+  line-height: 1.2;
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+
+.button-content-active {
+  display: inline-block;
+  position: relative;
+  font-family: sans-serif;
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 2px 0 #333;
+  border-radius: 25px;
+  border: 1px solid rgb(39 39 39 / 75%);
+  padding: 5px 25px;
+  display: inline-block;
+  margin-right: 0;
+  background: #ffffff;
+  color: #333;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 15px;
+  z-index: 2;
+}
+
+.button-content-active:hover {
+  transform: none;
+  box-shadow: none;
+  color: #333;
+}
+
+.button-content-active a:hover {
+  color: #333;
+}
+
+.button-content svg {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-right: 7px;
+  vertical-align: middle;
+  margin-top: -3px;
+  stroke: rgba(0, 0, 0, 0.4);
+}
+
+.meta-bottom {
+  margin-top: 40px;
+}
+
+/* css underline */
+.text-left-content {
+  font-size: 34px;
+  font-weight: bolder;
+  position: relative;
+  cursor: pointer;
+  display: inline;
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+/* footer */
+.titleFooter {
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 20px;
+  z-index: 1;
+  position: relative;
+  top: -20px;
+  font-size: 20px;
+  font-family: sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+/* css icon right 3 */
+.icon-right-3 {
+  border: 1px solid black;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 0px;
+}
+
+/* css tag Cloud */
+.tagCloud > div > button {
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 0px 10px 12px 0px;
+}
+
+/* css Form */
+.subcribe-form {
+  position: relative;
+  z-index: 2;
+}
+
+.subscribeFooter {
+  border-top: 1px solid rgb(39 39 39 / 75%);
+  margin-top: 40px;
+}
+
+.titleForm {
+  font-weight: 800;
+  margin-bottom: 30px;
+  font-size: 40px;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  margin: 53.2px 0px 30px;
+}
+
+.footer .subscribe-form .form-group {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.subcribe {
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+  padding: 60px 50px;
+}
+
+.subscribe-decoration {
+  background: url(https://ghost.estudiopatagon.com/groovy/assets/images/subscribe-decoration.png)
+    no-repeat left top;
+  position: absolute;
+  left: 24%;
+  top: 150px;
+  margin-right: -70px;
+  z-index: -1;
+  width: 125px;
+  height: 103px;
+  background-size: contain;
+}
+
+.inputForm {
+  margin: 0;
+  padding-right: 175px;
+  height: 60px;
+  padding: 15px 175px 15px 45px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  border: 1px solid black;
+  border-radius: 100px;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+/* css submit button */
+.submitButton {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  height: 47px;
+  font-size: 17px;
+  padding: 0px 35px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  font-family: sans-serif;
+  font-weight: 700;
+  border-radius: 25px;
+  border: 1px solid rgb(39 39 39 / 75%);
+  background-color: #ff4c60;
+  transition: all 300ms var(cubic-bezier(0.5, 2.5, 0.7, 0.7));
+}
+
+.description {
+  max-width: 400px;
+  margin: 0 100px;
+  font-size: 15px;
+}
+
+.menuFooter {
+  margin: 16px 0;
+  padding: 0px 0px 0px 40px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.menuFooter > li {
+  display: inline;
+  margin-left: 7px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuFooter > li > a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+}
+
+.menuFooter > li > a:hover {
+  color: #ff0081;
+}
+
+.fa-twitter,
+.fa-facebook-f,
+.fa-solid-earth:not(.social-button a i) {
+  font-size: 14px;
+  font-size: inherit;
+}
+
+.footer .second-nav {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.published {
+  margin: 0 0 20px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* grid system size */
+.grid-container {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.grid-large {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.grid-small {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* number footer */
+.number {
+  position: absolute;
+  z-index: 3;
+  left: -10px;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #000;
+  background: url(https://ghost.estudiopatagon.com/groovy/assets/images/number-decoration.svg)
+    no-repeat center center;
+}
+
+/* reponsive footer*/
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media screen and (max-width: 480px) {
+  .content-1 {
+    display: none; /* hide in mobile */
+  }
+
+  .subcribe {
+    border: 0;
+    margin: 0;
+  }
+
+  .titleForm {
+    font-size: 26px;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  .description {
+    font-size: 13px;
+    margin: 0px;
+  }
+
+  .form-group {
+    display: block;
+    width: auto;
+  }
+
+  .subscribe-decoration {
+    left: 0;
+    top: 75px;
+  }
+
+  .menuFooter {
+    padding: 0;
+  }
+
+  .inputForm {
+    padding: 15px 20px;
+    padding-right: 110px !important;
+    font-size: 13px !important;
+  }
+  .submitButton {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}

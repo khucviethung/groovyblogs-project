@@ -1,0 +1,166 @@
+/* authors css */
+
+.img-effect:hover {
+  -webkit-box-shadow: 4px 4px 4px 0px #333;
+  box-shadow: 4px 4px 4px 0px #333;
+  -webkit-transform: translate(-3px, -3px);
+  -ms-transform: translate(-3px, -3px);
+  transform: translate(-3px, -3px);
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.meta-bottom {
+  margin-top: 40px;
+}
+
+/* author article */
+.author-article {
+  float: right;
+  text-decoration: none;
+  color: #333;
+}
+
+.author-article:hover {
+  color: #333;
+}
+
+.img-author {
+  background-image: url("https://ghost.estudiopatagon.com/groovy/content/im…eard-very-funny-joke-laughed_295783-2454--1-.webp");
+  width: 35px;
+  height: 35px;
+  position: relative;
+  left: auto;
+  top: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+  border-radius: 50%;
+  border: 1px solid black;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+/* css button prev next */
+#prev-btn,
+#next-btn {
+  background: #ffffff;
+  border: 1px solid black;
+  border-radius: 100%;
+}
+
+#prev-btn span svg,
+#next-btn span svg{
+  font-size: small;
+  margin-bottom: 5px;
+}
+
+
+.authors h3.title {
+  display: inline-block;
+}
+
+.navigation-container {
+  float: right;
+}
+
+.slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.meetTheAuthor {
+  background: #ffffff;
+  border: 1px solid black;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 25px;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.page-info {
+  font-family: serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.itemCarousel > .col > a > img {
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.authors {
+  padding: 0;
+  margin-top: 50px;
+}
+
+.nameOfAuthors {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 20px;
+  z-index: 1;
+  position: relative;
+  top: -50px;
+  padding: 5px;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+/* reponsive authors */
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+/* Media queries for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .itemCarousel .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 35px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+  }
+
+  .ImageAuthors {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  .itemCarousel .col {
+    flex: 0 0 50%; /* 2 items for each item 50% */
+    max-width: 100%;
+    margin-bottom: 20px; /* Optional: Adjust spacing between items */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    flex-wrap: nowrap;
+  }
+
+  .ImageAuthors {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-btn {
+    font-size: 1.2rem;
+  }
+}

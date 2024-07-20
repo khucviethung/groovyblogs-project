@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global css dùng chung cho tất cả */
+html,
+body {
+  background-color: #54cbca !important;
+  font: 16px;
+  font-family: sans-serif;
+  letter-spacing: 0.3px;
+  word-wrap: break-word;
+  background-image: url(https://ghost.estudiopatagon.com/groovy/assets/images/background-decoration.svg),
+    url(https://ghost.estudiopatagon.com/groovy/assets/images/background-decoration.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 9.5% 95px, 90.5% 95px;
+  background-attachment: fixed, fixed;
+  background-origin: padding-box;
+  background-size: 150px;
+}
+
+footer {
+  background-color: #fffacd;
+  border-top: 1px solid rgb(39 39 39 / 75%);
+  border-bottom: 1px solid rgb(39 39 39 / 75%);
+  padding-bottom: 20px;
+  margin-top: 120px;
+  padding: 0;
+}
+
+/* grid system size */
+.grid-container {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.grid-large {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.grid-medium {
+  max-width: 990px;
+}
+
+.grid-small {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* background box */
+.bg-box {
+  background-color: #fffacd;
+  border-radius: 15px;
+  border: 1px solid rgb(39 39 39 / 75%);
+}
+
+/* hover img all */
+button:hover:not(
+    .toggle-card-icon,
+    .toggle-btn,
+    .audio-play-icon,
+    .audio-pause-icon,
+    .audio-playback-rate,
+    .audio-unmute-icon
+  ),
+img:hover:not(.img-menu) {
+  box-shadow: 2px 2px #443c3c;
+  transform: translate3d(-2px, -2px, 0);
+  transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
+  cursor: pointer;
+}
+
+button:active:not(
+    .toggle-card-icon,
+    .toggle-btn,
+    .audio-play-icon,
+    .audio-playback-rate,
+    .audio-unmute-icon
+  ),
+img:active:not(.img-menu) {
+  box-shadow: 2px 2px #443c3c;
+  transform: translate3d(-2px, -2px, 0);
+}
+
+/* css color of articles */
+#articles-of-leftcontent article:nth-child(1) .category-overplay::before,
+#articles-of-leftcontent article:nth-child(8) .category-overplay::before {
+  background-color: #c5c5fe;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: -2px;
+  bottom: -2px;
+  opacity: 0.25;
+  border-radius: 15px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+#articles-of-leftcontent article:nth-child(2) .category-overplay::before,
+#articles-of-leftcontent article:nth-child(6) .category-overplay::before,
+.tag-description::before {
+  background-color: #1dd7c2;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: -2px;
+  bottom: -2px;
+  opacity: 0.25;
+  border-radius: 15px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+#articles-of-leftcontent article:nth-child(3) .category-overplay::before,
+#articles-of-leftcontent article:nth-child(7) .category-overplay::before {
+  background-color: #83ea6c;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: -2px;
+  bottom: -2px;
+  opacity: 0.25;
+  border-radius: 15px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+#articles-of-leftcontent article:nth-child(4) .category-overplay::before,
+#articles-of-leftcontent article:nth-child(5) .category-overplay::before {
+  background-color: #85b2f4;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: -2px;
+  bottom: -2px;
+  opacity: 0.25;
+  border-radius: 15px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* css category-overplay  */
+.category-overplay {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 15px;
+}
+
+.category-overplay::before {
+  background-color: #c5c5fe;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: -2px;
+  bottom: -2px;
+  opacity: 0.25;
+  border-radius: 15px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* hover button all*/
+/* css icon */
+.fa-facebook-f {
+  color: blue;
+  font-size: 22px;
+}
+
+.fa-twitter {
+  color: cornflowerblue;
+  font-size: 22px;
+}
+
+.fa-instagram {
+  font-size: 20px;
+  color: #d6249f;
+  font-size: 22px;
+}
+
+.fa-rss {
+  color: orange;
+  font-size: 22px;
+}
+
+.fa-earth-americas {
+  color: #ff4c60;
+  font-size: 22px;
+}
+
+.social-button {
+  float: right;
+  margin: 5px 0 0 30px;
+}
+
+.social-button.fill-color a {
+  display: inline-block;
+  margin: 0 2px;
+  background: none;
+  box-shadow: none;
+  width: 34px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.social-button a i.fa-brands,
+.social-button a i.fa-solid {
+  font-size: 22px;
+  font-size: normal !important;
+  display: inline-block;
+  font: FontAwesome;
+  text-rendering: auto;
+}
+
+/* underline effect all */
+.underline-effect {
+  color: #333 !important;
+  background-size: 100% 5%;
+  text-decoration: none;
+}
+
+.underline-effect a:not(.epcl-button) {
+  padding-bottom: 5px;
+  background-image: linear-gradient(to right, #333 0%, #333 100%);
+  background-size: 0% 5%;
+  background-repeat: no-repeat;
+  background-position: left 80%;
+  transition: all 400ms ease;
+  text-decoration: none;
+  color: #333 !important;
+}
+
+.underline-effect a:not(.epcl-button):hover {
+  color: #333 !important;
+  background-size: 100% 5%;
+}
+
+/* reponsive app */
+/* mobile reponsive */
+@media screen and (max-width: 1150px) {
+  .grid-container {
+    max-width: 1100px;
+    margin: auto;
+  }
+}
