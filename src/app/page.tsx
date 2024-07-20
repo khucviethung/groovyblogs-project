@@ -5,6 +5,8 @@ import AuthorsCarousel from '@/component/authors-carousel/page';
 
 
 export default function Home() {
+  const carouselId = "my-carousel";
+
   return (
     // Main content
     <main id="contentHomepage" className="grid-container">
@@ -17,7 +19,7 @@ export default function Home() {
           </section>
       </div>
         {/* carousel authors */}
-        <AuthorsCarousel/>
+        <AuthorsCarousel carouselId={carouselId}/>
     </main>
 
   );
