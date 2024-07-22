@@ -4,29 +4,37 @@ import Image from "next/image";
 import './globals.authors.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useRef } from "react";
-import  { Carousel } from "bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useRef } from "react";import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function AuthorsCarousel() {
-    const carouselRef = useRef<HTMLDivElement>(null);      // selector tới DOM của phần tử div
-    const prevBtnRef = useRef<HTMLButtonElement>(null);     // handle prevbtn với init là null,kiểu giá trị là HTML button 
-    const nextBtnRef = useRef<HTMLButtonElement>(null);     // handle nextbtn với init là null,kiểu giá trị là HTML button 
+    const carouselRef = useRef<HTMLDivElement>(null);      // selector tới DOM của phần tử div,kiểu giá trị là Div element
+    const prevBtnRef = useRef<HTMLButtonElement>(null);     // handle prevbtn với init là null,kiểu giá trị là Button element
+    const nextBtnRef = useRef<HTMLButtonElement>(null);     // handle nextbtn với init là null,kiểu giá trị là Button element
 
     // handle carousel
     useEffect(() => {
         if (typeof window !== 'undefined') {
+            // lỗi SSR nếu nhập trực tiếp boostrap(carousel) thì sẽ lỗi,nên ta phải import để nó Nhập Động
+            // khi đó nhập động sẽ được sử dụng cho các thư viện của bên thứ ba tương tác với DOM 
+            // để tránh các sự cố kết xuất phía máy chủ (SSR).
+            import("bootstrap/js/dist/carousel").then((moduleCarousel) => {
+            const Carousel = moduleCarousel.default
+            
+            // selector tới carousel cần DOM
             const selectorCarousel = carouselRef.current ;
             if (!selectorCarousel) return;
-
-            const carousel = new Carousel(selectorCarousel, {
+            
+            // handle carousel default của nó 
+            const handleCarousel = new Carousel(selectorCarousel, {
                 interval: false,     // chặn k cho carousel chạy
             });
 
-            const handlePrev = () => carousel.prev();
-            const handleNext = () => carousel.next();
+            // handle chức năng prev next
+            const handlePrev = () => handleCarousel.prev();
+            const handleNext = () => handleCarousel.next();
 
+            // handle sự kiện click vào nút
             prevBtnRef.current?.addEventListener('click', handlePrev);
             nextBtnRef.current?.addEventListener('click', handleNext);
 
@@ -34,6 +42,7 @@ export default function AuthorsCarousel() {
                 prevBtnRef.current?.removeEventListener('click', handlePrev);
                 nextBtnRef.current?.removeEventListener('click', handleNext);
             };
+            }) 
         }
     }, []);
 
