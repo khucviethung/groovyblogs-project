@@ -5,7 +5,6 @@ import AuthorsCarousel from '@/component/authors-carousel/page';
 
 
 export default function Home() {
-  const carouselId = "my-carousel";
 
   return (
     // Main content
@@ -19,7 +18,7 @@ export default function Home() {
           </section>
       </div>
         {/* carousel authors */}
-        <AuthorsCarousel carouselId={carouselId}/>
+        <AuthorsCarousel/>
     </main>
 
   );

@@ -9,38 +9,33 @@ import  { Carousel } from "bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-// props
-interface MyCarouselProps {
-    carouselId: string;
-}
-
-export default function AuthorsCarousel({ carouselId }: MyCarouselProps) {
+export default function AuthorsCarousel() {
     const carouselRef = useRef<HTMLDivElement>(null);      // selector tới DOM của phần tử div
     const prevBtnRef = useRef<HTMLButtonElement>(null);     // handle prevbtn với init là null,kiểu giá trị là HTML button 
     const nextBtnRef = useRef<HTMLButtonElement>(null);     // handle nextbtn với init là null,kiểu giá trị là HTML button 
 
     // handle carousel
-    // useEffect(() => {
-    //     if (typeof window !== 'undefined') {
-    //         const selectorCarousel = carouselRef.current;
-    //         if (!selectorCarousel) return;
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const selectorCarousel = carouselRef.current ;
+            if (!selectorCarousel) return;
 
-    //         const carousel = new Carousel(selectorCarousel, {
-    //             interval: false,     // chặn k cho carousel chạy
-    //         });
+            const carousel = new Carousel(selectorCarousel, {
+                interval: false,     // chặn k cho carousel chạy
+            });
 
-    //         const handlePrev = () => carousel.prev();
-    //         const handleNext = () => carousel.next();
+            const handlePrev = () => carousel.prev();
+            const handleNext = () => carousel.next();
 
-    //         prevBtnRef.current?.addEventListener('click', handlePrev);
-    //         nextBtnRef.current?.addEventListener('click', handleNext);
+            prevBtnRef.current?.addEventListener('click', handlePrev);
+            nextBtnRef.current?.addEventListener('click', handleNext);
 
-    //         return () => {
-    //             prevBtnRef.current?.removeEventListener('click', handlePrev);
-    //             nextBtnRef.current?.removeEventListener('click', handleNext);
-    //         };
-    //     }
-    // }, [carouselId]);
+            return () => {
+                prevBtnRef.current?.removeEventListener('click', handlePrev);
+                nextBtnRef.current?.removeEventListener('click', handleNext);
+            };
+        }
+    }, []);
 
     return(
         <>
@@ -61,11 +56,11 @@ export default function AuthorsCarousel({ carouselId }: MyCarouselProps) {
                 <div className="carousel">
                     <div className="slick-list">
                         <div
-                        id={carouselId}
-                        className="carousel slide my-auto"
-                        // data-bs-ride="carousel"
-                        data-bs-interval ="false"   // dừng carousel
-                        ref={carouselRef}
+                            id="carouselInterval"
+                            className="carousel slide my-auto"
+                            // data-bs-ride="carousel"
+                            data-bs-interval ="false"   // dừng carousel
+                            ref={carouselRef}
                         >
                         <div className="carousel-inner p-1 mx-0">
                             <section className="carousel-item active">
