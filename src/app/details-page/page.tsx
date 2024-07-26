@@ -226,7 +226,7 @@ export default function DetailPage() {
                               required
                             />
                             <button
-                              className="submitButton"
+                              className="submitbutton-detailspage"
                               type="submit"
                               data-title="Submit"
                             >

@@ -236,10 +236,10 @@
 }
 
 /* css submit button */
-.submitButton {
+.submitbutton-detailspage {
   position: absolute;
-  right: 10px;
-  top: 7px;
+  right: 83px;
+  bottom:112px;
   height: 47px;
   font-size: 17px;
   padding: 0px 35px;
